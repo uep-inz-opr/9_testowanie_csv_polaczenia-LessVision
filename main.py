@@ -2,7 +2,7 @@ import csv
 
 class MenadzerPolaczen:
   def __init__(self, filename):
-    self.filenaCme = filename
+    self.filename = filename
     self.data_dict = self.read_data()
 
   def read_data(self):
@@ -21,5 +21,5 @@ class MenadzerPolaczen:
   def pobierz_najczesciej_dzwoniacego(self):
     return max(self.data_dict.items(), key= lambda x: x[1])
 
-if __name__ == "__main__":
+if __name__ == '__main__':
   print(MenadzerPolaczen(input()).pobierz_najczesciej_dzwoniacego())
